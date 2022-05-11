@@ -1,3 +1,21 @@
 * {
     box-sizing: border-box;
 }
+
+.body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.drawingGrid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.gridElement {
+    border: 0.1em solid;
+    border-color: black;
+}

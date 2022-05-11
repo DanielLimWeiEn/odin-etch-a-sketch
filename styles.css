@@ -13,6 +13,13 @@ body {
     background-color: #1f2937;
 }
 
+.container {
+    display: flex;
+    padding: 32px 128px 32px 128px;
+    justify-content: space-between;
+    gap: 180px;
+}
+
 .header {
     font-size: 48px;
     font-weight: bolder;
@@ -21,6 +28,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.customization {
+    display: flex;
+    flex-direction: column;
+    border: 0.25em solid;
+    border-color: #e5e7eb;
+    padding: 16px;
+    color: #f9faf8;
+    border-radius: 12px;
+}
+
+.subtitle {
+    padding: 8px;
+    text-decoration: underline;
 }
 
 .drawingGrid {
@@ -45,5 +67,12 @@ body {
 
 .hoverGridElement {
     background-color: #1f2937; /* Change color as needed. */
-    transform: scale(1.1);
+    transform: scale(1);
+}
+
+button {
+    background-color: #e5e7eb;
+    padding: 12px;
+    border-style: none;
+    border-radius: 12px;
 }

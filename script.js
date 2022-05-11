@@ -13,9 +13,10 @@ function drawGrid(n) {
             entry.addEventListener('mouseover', (event) => {
                 entry.classList.add("hoverGridElement");
             });
-            entry.addEventListener('transitionend', (event) => {
-                entry.classList.remove("hoverGridElement");
-            })
+            // For non lasting fade away affect.
+            // entry.addEventListener('transitionend', (event) => {
+            //     entry.classList.remove("hoverGridElement");
+            // })
             row.appendChild(entry);  
         }
         drawingGrid.appendChild(row);
@@ -34,3 +35,10 @@ setDimensionButton.addEventListener('click', event => {
     }
     drawGrid(dim);
 });
+
+// 3. Reset button.
+const resetButton = document.querySelector("#reset");
+
+resetButton.addEventListener('click', event => {
+    drawGrid(16);
+})

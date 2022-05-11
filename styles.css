@@ -43,6 +43,7 @@ body {
 .subtitle {
     padding: 8px;
     text-decoration: underline;
+    text-align: center;
 }
 
 .drawingGrid {

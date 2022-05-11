@@ -12,15 +12,15 @@ function drawGrid(n) {
             entry.style.width = `${512 / n}px`;
             entry.style.height = `${512 / n}px`;
             entry.addEventListener('mousedown', (event) => {
-                isDrawing = true;
+                isDrawing = true; // Use a global variable to mark whether we are draing.
             });
             entry.addEventListener('mousemove', (event) => {
-                if (isDrawing) {
+                if (isDrawing) { // Only draw when the mouse is down.
                     entry.classList.add("hoverGridElement");
                 }
             });
             entry.addEventListener('mouseup', (event) => {
-                isDrawing = false;
+                isDrawing = false; // Set the variable to false on mouseup to prevent drawing.
             });
             // For non lasting fade away affect.
             // entry.addEventListener('transitionend', (event) => {

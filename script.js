@@ -2,6 +2,7 @@
 const drawingGrid = document.querySelector(".drawingGrid");
 
 function drawGrid(n) {
+    drawingGrid.replaceChildren();
     for (let i = 0; i < n; i++) {
         const row = document.createElement('div');
         for (let j = 0; j < n; j++) {
@@ -23,4 +24,13 @@ function drawGrid(n) {
 
 drawGrid(16);
 
-// 2. Customizing the size of the
+// 2. Customizing the size of the grid.
+const setDimensionButton = document.querySelector("#dimension");
+
+setDimensionButton.addEventListener('click', event => {
+    let dim = parseInt(prompt("Enter Dimensions for N x N Grid"));
+    while (dim > 64 || dim < 1) {
+        dim = parseInt(prompt("Enter Dimension for N x N Grid"));
+    }
+    drawGrid(dim);
+});

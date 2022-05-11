@@ -1,5 +1,6 @@
 // 1. Creating 16 x 16 grid of square divs.
 const drawingGrid = document.querySelector(".drawingGrid");
+let isDrawing = false;
 
 function drawGrid(n) {
     drawingGrid.replaceChildren();
@@ -10,8 +11,16 @@ function drawGrid(n) {
             entry.classList.add("gridElement");
             entry.style.width = `${512 / n}px`;
             entry.style.height = `${512 / n}px`;
-            entry.addEventListener('mouseover', (event) => {
-                entry.classList.add("hoverGridElement");
+            entry.addEventListener('mousedown', (event) => {
+                isDrawing = true;
+            });
+            entry.addEventListener('mousemove', (event) => {
+                if (isDrawing) {
+                    entry.classList.add("hoverGridElement");
+                }
+            });
+            entry.addEventListener('mouseup', (event) => {
+                isDrawing = false;
             });
             // For non lasting fade away affect.
             // entry.addEventListener('transitionend', (event) => {

@@ -6,7 +6,14 @@ for (let i = 0; i < 16; i++) {
     for (let j = 0; j < 16; j++) {
         const entry = document.createElement('div');
         entry.classList.add("gridElement");
-        entry.textContent = "aaaa";
+        entry.style.width = `${512 / 16}px`;
+        entry.style.height = `${512 / 16}px`;
+        entry.addEventListener('mouseover', (event) => {
+            entry.classList.add("hoverGridElement");
+        });
+        entry.addEventListener('transitionend', (event) => {
+            entry.classList.remove("hoverGridElement");
+        })
         row.appendChild(entry);  
     }
     drawingGrid.appendChild(row);

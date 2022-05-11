@@ -1,11 +1,23 @@
 * {
     box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.body {
+body {
     display: flex;
     margin: 0;
     padding: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1f2937;
+}
+
+.header {
+    font-size: 48px;
+    font-weight: bolder;
+    color: #f9faf8;
+    padding: 32px 128px 32px 128px;
 }
 
 .drawingGrid {
@@ -13,9 +25,22 @@
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    width: 512px;
+    height: 512px;
+}
+
+.row {
+    display: flex;
 }
 
 .gridElement {
-    border: 0.1em solid;
-    border-color: black;
+    background-color: #f9faf8;
+    border: 0.5px solid;
+    border-color: #e5e7eb;
+    transition: all 0.07s ease;
+}
+
+.hoverGridElement {
+    background-color: #1f2937; /* Change color as needed. */
+    transform: scale(1.1);
 }
